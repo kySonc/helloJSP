@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" %>
+<%@ page isELIgnored="true" %>
 <html>
 	<head>
 		<title>Direction Tag</title>
