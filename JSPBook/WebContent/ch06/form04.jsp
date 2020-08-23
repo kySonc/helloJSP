@@ -5,13 +5,14 @@
 	</head>
 	<body>
 		<h3>회원 가입</h3>
+		<%--입력 양식에 입력된 데이터를 서버로 전송하여 폼 데이터를 처리할 수 있도로 form 태그의 action속성 값, method 방식을 작성 --%>
 		<form action="form04_process.jsp" name="member" method="post">
 			<p>아 이 디 : <input type="text" name="id">
 					  <input type="button" value="아이디 중복 검사">
 			<p>비밀번호 : <input type="text" name="passwd">
 			<p>이름 : <input type="text" name="name">
 			<%--연락처 입력 값 중에서 첫 번째 번호는 선택할 수 있게 select태그와 option태그로 작성 --%>
-			<p>연락처 : <select name="phoner1">
+			<p>연락처 : <select name="phone1">
 						<option value="010">010</option>
 						<option value="011">011</option>
 						<option value="016">016</option>
