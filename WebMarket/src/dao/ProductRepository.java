@@ -47,4 +47,19 @@ public class ProductRepository {
 			public ArrayList<Product>getAllProducts(){
 				return listOfProducts;
 	}
+	
+	//상품 상세 정보를 가져오는 메소드
+	public Product getProductById(String productId) {
+		Product productById = null;
+		
+		for(int i = 0; i< listOfProducts.size(); i++) {
+			Product product = listOfProducts.get(i);
+			if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
+				productById = product;
+				break;
+			}
+		}
+		
+		return productById;
+	}
 }
