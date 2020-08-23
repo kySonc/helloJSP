@@ -44,14 +44,14 @@ public class ProductRepository {
 	}
 	
 	//listOfProduct에 저장된 모든 상품 목록을 가져오는 getAllProduct()메소드
-			public ArrayList<Product>getAllProducts(){
+			public ArrayList<Product> getAllProducts(){
 				return listOfProducts;
 	}
 	
 	//상품 상세 정보를 가져오는 메소드
 	public Product getProductById(String productId) {
 		Product productById = null;
-		
+	//객체 변수 listOfProducts에 저장된 모든 상품 목록에서 상품아이디와 일치하는 상품 가져오기	
 		for(int i = 0; i< listOfProducts.size(); i++) {
 			Product product = listOfProducts.get(i);
 			if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
