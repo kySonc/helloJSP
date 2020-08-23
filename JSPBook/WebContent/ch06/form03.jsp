@@ -25,8 +25,8 @@
 			 <P>취미 : 독서<input type="checkbox" name="hobby1" checked>
 			 		  운동<input type="checkbox" name="hobby2" >
 			 		   영화<input type="checkbox" name="hobby3" >
-			 <%--여러 줄의 텍스트를 입력할 수 있는 textarea 태그 --%>		   
-			 <P><textara name="comment" cols="30" row="3" placeholder="가입 인사를 입력해주세요"></textara>
+			 <%--여러 줄의 텍스트를 입력할 수 있는 textarea 태그 --%>
+			 <P><textarea name="comment" cols="30" row="3" placeholder="가입 인사를 입력해주세요"></textarea>
 			 <p><input type="submit" value="가입하기">
 			 	<input type="reset" value="다시 쓰기">
 		</form>
