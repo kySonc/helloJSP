@@ -6,8 +6,10 @@ import dto.Product;
 
 public class ProductRepository {
 	
+	//상품목록을 저장하기 위한 ArrayList<Product>객체타입의 변수 listOfProduct 작성
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
 	
+	//상품 정보를 설정하고 listOfProducts에 저장
 	public ProductRepository() {
 		
 		Product phone = new Product("P1234", "iPhone 6s", 800000);
@@ -39,6 +41,10 @@ public class ProductRepository {
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
 		listOfProducts.add(tablet);
-		
+	}
+	
+	//listOfProduct에 저장된 모든 상품 목록을 가져오는 getAllProduct()메소드
+			public ArrayList<Product>getAllProducts(){
+				return listOfProducts;
 	}
 }
