@@ -22,7 +22,9 @@
 				<h3>
 					<%= tagline %>
 				</h3>
+					<%--5초마다 JSP페이지가 갱신되도록 setIntHeader()메소드 추가 --%>
 				<%
+					response.setIntHeader("Refresh",5);
 					Date day  = new java.util.Date();
 					String am_pm;
 					int hour = day.getHours();
@@ -34,7 +36,7 @@
 						am_pm = "PM";
 						hour = hour - 12;
 					}
-					String CT = hour + ":" + minute + ":" + second + " " + am_pm;
+					String CT = hour + " : " + minute + " : " + second + "  " + am_pm;
 					out.println("현재 접속 시각: " + CT + "\n");
 				%>
 			</div>
