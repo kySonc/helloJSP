@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8"%>
 <%@ page import="dto.Product"%>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+<%-- 기존에 작성된 useBean 액션태그 삭제 --%>
+<%@ page import="dao.ProductRepository"%>
 <html>
 	<head>
 		<link rel = "stylesheet" 
@@ -15,11 +16,12 @@
 			</div>
 		</div>
 		<%--상품 목록 페이지의 상품 아이디 전송받도록 getParameter()작성 --%>
-		<%--useBean의 id속성 값을 통해 ProductRepository클래스의 getProductById()호출 --%>
-		<%--반환된 결과 값을 Product객체 타입의 변수 product에 저장 --%>
+		<%--ProductRepository 클래스의 객체 변수 instance를 호출하는 getInstance()메소드를 작성--%>
+		<%--이를 통해 getProuductById()메소드를 호출하여 반환 결과 값을 Product 객체 타입의 변수 product에 저장--%>
 		<%
 			String id = request.getParameter("id");
-			Product product = productDAO.getProductById(id);
+			ProductRepository dao = ProductRepository.getInstance();
+			Product product = dao.getProductById(id);
 		%>
 		
 		<div class="container">
