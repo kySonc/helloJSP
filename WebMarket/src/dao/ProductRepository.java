@@ -9,6 +9,20 @@ public class ProductRepository {
 	//상품목록을 저장하기 위한 ArrayList<Product>객체타입의 변수 listOfProduct 작성
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
 	
+	//신규 상품 데이터를 저장하는 메소드 만들기 추가
+	//ProductRepository 클래스의 기본 생성자에 대한 객체 변수 instance를 작성
+	private static ProductRepository instance = new ProductRepository();
+	
+	//객체 변수 instance에 대한 Getter()메소드 작성
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
+	//객체 변수 listOfProducts에 새로운 상품 정보를 등록하는 addProduct()메소드를 작성
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
+	}
+	
 	//상품 정보를 설정하고 listOfProducts에 저장
 	public ProductRepository() {
 		
