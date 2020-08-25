@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8"%>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 		<title>상품 등록</title>
 	</head>
 	<body>
@@ -13,7 +13,8 @@
 		</div>
 		<div class="container">
 			<%--입력 양식에 입력된 데이터를 서버로 전송하여 폼 데이터를 처리하도록 form태그의 action 속성값,method 방식을 작성 --%>
-			<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post">
+			<%--addProduct.jsp 파일에 부트스트랩 css를 포함하고 상품 이미지 파일을 업로드하기 위해 enctype 작성 --%>
+			<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
 				<div class="form-group row">
 					<label class="col-sm-2">상품 코드</label>
 					<div class="col-sm-3">
@@ -68,9 +69,10 @@
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-sm-offset-2 col-sm-10">
-						<%--입력된 데이터를 서버로 전송하도록input 태그의 type속성 값을 submit으로 작성 --%>
-						<input type-"submit" class="btn btn-primary" value="등록">
+					<label class="col-sm-2">이미지</label>
+					<div class="col-sm-5">
+						<%--파일을 입력 받도록 input 태그의 type속성 갑을 file로 작성 --%>
+						<input type="file" name="productImage" class="form-control" >
 					</div>
 				</div>
 			</form>

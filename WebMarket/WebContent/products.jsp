@@ -33,6 +33,7 @@
 				%>
 				<%-- product에 저장된 상품 목록의 내역 출력 --%>
 				<div class="col-md-4">
+					<%--C:\upload폴더에 저장된 상품 이미지를 출력 --%>
 					<img src="C:/upload/<%=product.getFilename() %>" style="width: 100%">
 					<h3><%= product.getPname()%></h3>
 					<p><%= product.getDescription()%>
