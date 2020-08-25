@@ -8,33 +8,35 @@
 	</head>
 	<body>
 		<%
-			String path = "C:\\upload";
+			String path="C:\\upload";
 			
-			DiskFileUpload upload = new DiskFileUpload();
+			DiskFileUpload upload=new DiskFileUpload();
 			
 			upload.setSizeMax(1000000);
 			upload.setSizeThreshold(4096);
 			upload.setRepositoryPath(path);
 			
-			List items=upload.parseRequest(request);
-			Iterator params = items.iterator();
+			List items=upload.parseRequest(request);			
+			Iterator params=items.iterator();
 			
+			
+								
 			while(params.hasNext()){
 				FileItem item = (FileItem)params.next();
 				
-				if(item.isFormField()){	//파일이 아닌경우
-					String name = item.getFieldName();
-					String value = item.getString("utf-8");
-					out.println(name + "=" + value + "<br>");
+				if(item.isFormField()){	
+					String name=item.getFieldName();
+					String value=item.getString("utf-8");
+					out.println(name+"="+value+"<br>");
 				}else{
-					String fileFieldName = item.getFieldName();
-					String fileName = item.getName();
-					String contentType = item.getContentType();
+					String fileFieldName=item.getFieldName();
+					String fileName=item.getName();
+					String contentType=item.getContentType();
 					
-					fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
-					long fileSize = item.getSize();
+					fileName=fileName.substring(fileName.lastIndexOf("\\")+1);
+					long fileSize=item.getSize();
 					
-					File file = new File(path + "/" + fileName);
+					File file=new File(path+"/"+fileName);
 					item.write(file);
 					
 					out.println("----------------------------<br>");
