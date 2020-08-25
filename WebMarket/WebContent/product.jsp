@@ -4,8 +4,7 @@
 <%@ page import="dao.ProductRepository"%>
 <html>
 	<head>
-		<link rel = "stylesheet" 
-		href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+		<link rel = "stylesheet" href ="./resources/css/bootstrap.min.css" /> 
 		<title>상품 상세 정보</title>
 	</head>
 	<body>
@@ -26,6 +25,10 @@
 		
 		<div class="container">
 			<div class="row">
+				<div class="col-md-5">
+					<%--C:\upload 폴더에 저장된 상품 이미지를 출력하기위해 추가 --%>
+					<img src="C:/upload/<%=product.getFilename() %>" style="width:100%">
+				</div>
 				<div class="col-md-6">
 					<%--product에 저장된 상품명,상품 상세 정보 상품코드...출력하도록 표현문 작성 --%>
 					<h3><%=product.getPname() %></h3>

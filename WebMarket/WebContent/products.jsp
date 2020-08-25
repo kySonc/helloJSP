@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<%--bootstrap.css 경로 변겅 --%>
-		<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 		<title>상품 목록</title>
 	</head>
 	<body>
@@ -33,7 +33,7 @@
 				%>
 				<%-- product에 저장된 상품 목록의 내역 출력 --%>
 				<div class="col-md-4">
-					<img src="./resources/imges/<%=product.getFilename() %>" style="width: 100%">
+					<img src="C:/upload/<%=product.getFilename() %>" style="width: 100%">
 					<h3><%= product.getPname()%></h3>
 					<p><%= product.getDescription()%>
 					<p><%= product.getUnitPrice()%>
