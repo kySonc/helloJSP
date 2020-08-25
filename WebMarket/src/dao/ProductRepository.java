@@ -33,7 +33,8 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
-		
+		//productRepository 클래스의 기본 생성자에 상품 이미지를 설정하기
+		phone.setFilename("P1234.png");
 		
 		Product notebook = new Product("P1235", "LG PC 그램", 1500000);
 		
@@ -42,7 +43,8 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished");
-		
+		//productRepository 클래스의 기본 생성자에 상품 이미지를 설정하기
+		notebook.setFilename("P1235.png");		
 		
 		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
 		
@@ -51,6 +53,8 @@ public class ProductRepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("Old");
+		//productRepository 클래스의 기본 생성자에 상품 이미지를 설정하기
+		tablet.setFilename("P1236.png");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
