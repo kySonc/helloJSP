@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>성적 처리</title>
+	</head>
+	<script type="text/javascript">
+		function cleckForm(){
+			if(document.frm.name1.value == ""){
+				alert("이름을 입력해주세요");
+				document.frm.name1.select();
+			}
+		}
+		
+	</script>
+	<body>
+		<form action="TestScore1.jsp" method="post" name="frm">
+			<P>학생이 름1 : <input type="text" name="name1" >
+		       	국어성적1 : <input type="number" name="kor1" min="0" max="100">
+		       	영어성적1 : <input type="number" name="eng1" min="0" max="100">
+		       	수학성적1 : <input type="number" name="mat1" min="0" max="100">
+	 		<P>학생이 름2 : <input type="text" name="name2" >
+		       	국어성적2 : <input type="number" name="kor2" min="0" max="100">
+		       	영어성적2 : <input type="number" name="eng2" min="0" max="100">
+		       	수학성적2 : <input type="number" name="mat2" min="0" max="100">
+			<P>학생이 름3 : <input type="text" name="name3" >
+		      	 국어성적3 : <input type="number" name="kor3" min="0" max="100">
+		       	영어성적3 : <input type="number" name="eng3" min="0" max="100">
+		       	수학성적3 : <input type="number" name="mat3" min="0" max="100"><br>
+			<input type="submit" name="submit" value="전송" onclick="checkForm()">
+		</form>
+	</body>
+</html>

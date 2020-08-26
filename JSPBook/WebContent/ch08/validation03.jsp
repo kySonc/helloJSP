@@ -5,14 +5,15 @@
 	</head>
 	<script type="text/javascript">
 		function ckeckLogin(){
-			var form= document.loginForm;
+			var form = document.loginForm
 			
-			if(from.id.value.length < 4 || form.id.value.length > 12){
+			if (form.id.value.length < 4 || form.id.value.length > 12){
 				alert("아이디는 4~12자 이내로 입력 가능합니다.");
 				form.id.select();
 				return;
 			}
-			if(form.passwd.value.length < 4){
+			
+			if (form.passwd.value.length < 4){
 				alert("비밀번호는 4자 이상으로 입력해야 합니다!.");
 				form.passwd.select();
 				return;
