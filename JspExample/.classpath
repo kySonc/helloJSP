@@ -14,9 +14,5 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="D:/Tools/cos-26/lib/cos.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Tools/commons-io-2.7/commons-io-2.7.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Tools/commons-fileupload-1.4-bin/commons-fileupload-1.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Tools/jstl-1.2jar/jstl-1.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
