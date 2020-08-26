@@ -15,12 +15,12 @@
 						return;
 					}	
 				}	
-					if(isNaN(form.passwd.value)){
-						alert("비밀번호는 숫자만 입력 가능합니다!");
-						form.passwd.select();
-						return;
-					}
-					form.submit();
+				if(isNaN(form.passwd.value)){
+					alert("비밀번호는 숫자만 입력 가능합니다!");
+					form.passwd.select();
+					return;
+				}
+				form.submit();
 			}	
 		</script>
 	<body>

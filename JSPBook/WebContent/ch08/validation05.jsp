@@ -5,12 +5,11 @@
 	</head>
 	<script>
 		function checkMember(){
-			
 			var regExpId = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 			var regExpName = /^[가-힣]*$/;
 			var regExPasswd = /^[0-9]*$/;
-			var regExPhone = /^\d{3}-\{3,4}-\d{4}$/;
-			var regExpEmail = /6[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+			var regExPhone = /^\d{3}-\d{3,4}-\d{4}$/;
+			var regExpEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 			
 			var form = document.Member;
 			
@@ -22,27 +21,23 @@
 			
 			if(!regExpId.test(id)){
 				alert("아이디는 문자로 시작해주세요!");
-				form.id.selec();
+				form.id.select();
 				return;
 			}
 			if(!regExpName.test(name)){
 				alert("이름은 한글만 입력해주세요!");
-				form.id.selec();
 				return;
 			}
 			if(!regExpPasswd.test(passwd)){
 				alert("비밀번호는 숫자만 입력해주세요!");
-				form.id.selec();
 				return;
 			}
 			if(!regExpPhone.test(phone)){
 				alert("연락처 입력을 확인해주세요!");
-				form.id.selec();
 				return;
 			}
 			if(!regExpEmail.test(email)){
 				alert("이메일 입력을 확인해주세요!");
-				form.id.selec();
 				return;
 			}
 			form.submit();			
@@ -52,7 +47,7 @@
 		<h3>회원 가입</h3>
 		<form name="Member" action = "validation05_process.jsp" method="post">
 			<p>아 이 디 : <input type = "text" name="id">
-			<p>비밀빈호 : <input type = "text" name="passwd">
+			<p>비밀빈호 : <input type = "password" name="passwd">
 			<p>이름 : <input type = "text" name="name">
 			<p>연락처 : <select name="phone1">
 						<option value="010">010<option>
@@ -61,7 +56,7 @@
 						<option value="017">017<option>
 						<option value="019">019<option>
 					</select> - <input type="text" maxlength="4" size="4" name="phone2"> - 
-						<input type="text" maxlength="4" size="4" name="phon3" >
+						<input type="text" maxlength="4" size="4" name="phone3" >
 			<p>이메일 : <input type="text" name="email">
 			<p><input type="button" value="전송" onclick="checkMember()">
 		</form>
