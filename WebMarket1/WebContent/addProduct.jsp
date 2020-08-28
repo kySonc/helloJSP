@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+		<!-- 폼 페이지에 입력 항목의 데이터를 검사하는 핸들러 함수가 저장된 자바스크립트 파일를 가져오도록 작성 -->
+		<script type="text/javascript" src="./resources/js/validation.js"></script>
 		<title>상품 등록</title>
 	</head>
 	<body>
@@ -19,19 +21,19 @@
 					<label class="col-sm-2">상품 코드</label>
 					<div class="col-sm-3">
 						<%--상품 아이디 입력받도록 input태그의 type 속성값을 text로 작성하고 name속성 값을 productId로 작성 --%>
-						<input type="text" name="productId" class="form-control">
+						<input type="text" id="productId" name="productId" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-sm-2">상품명</label>
 					<div class="col-sm-3">
-						<input type="text" name="name" class="form-control">
+						<input type="text" id="name" name="name" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-sm-2">가격</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitPrice" class="form-control">
+						<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -56,7 +58,7 @@
 				<div class="form-group row">
 					<label class="col-sm-2">재고 수</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitsInStock" class="form-control">
+						<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -73,6 +75,12 @@
 					<div class="col-sm-5">
 						<%--파일을 입력 받도록 input 태그의 type속성 갑을 file로 작성 --%>
 						<input type="file" name="productImage" class="form-control" >
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-offset-2 col-sm-10">
+						<!-- <등록>을 클릭하면 핸들러 함수 CheckAddProduct()가 실행되도록 onclick속성을 작성 -->
+						<input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()">
 					</div>
 				</div>
 			</form>
