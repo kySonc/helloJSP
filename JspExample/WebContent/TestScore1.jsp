@@ -42,9 +42,9 @@
 		int mat3 = Integer.parseInt(request.getParameter("mat3"));
 		int sum3 = kor3 + eng3 + mat3;
 		double avg3 = Math.round((sum3 / 3.0)*100)/100.0;
-		int num1 = (sum1 > sum2)? 1 : ((sum1 > sum3)? 2 : 3);	
-		int num2 = (sum2 > sum1)? 1 : ((sum2 > sum3)? 2 : 3);
-		int num3 = (sum3 > sum2)? 1 : ((sum3 > sum1)? 2 : 3);
+		int num1 = (sum1 > sum2)? (sum1 > sum3)? 1 : 2 : (sum1 > sum3)? 2 : 3 ;	
+		int num2 = (sum2 > sum1)? (sum2 > sum3)? 1 : 2 : (sum2 > sum3)? 2 : 3 ;	
+		int num3 = (sum3 > sum1)? (sum3 > sum2)? 1 : 2 : (sum3 > sum2)? 2 : 3 ;	
 	%>
 	<style>
 		div{

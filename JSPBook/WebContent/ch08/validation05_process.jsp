@@ -4,6 +4,9 @@
 		<title>Validation</title>
 	</head>
 	<body>
+		<%
+			request.setCharacterEncoding("UTF-8");
+		%>
 		<p>아 이 디  : <%=request.getParameter("id") %>
 		<P>비밀번호 : <%=request.getParameter("passwd") %>
 		<p>이      름 : <%=request.getParameter("name") %>
