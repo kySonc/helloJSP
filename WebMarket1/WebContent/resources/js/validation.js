@@ -1,4 +1,4 @@
-fuction CheckAddProduct(){
+fuction CheckAddProduct() {
 	
 	var productId = document.getElementById("productId");
 	var name = document.getElementById("name");
