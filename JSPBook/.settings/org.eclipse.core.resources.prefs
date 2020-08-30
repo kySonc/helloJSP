@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/lib/jstl.jar=UTF-8
 encoding//WebContent/ch01/fcurency.jsp=UTF-8
 encoding//WebContent/ch01/first.jsp=UTF-8
 encoding//WebContent/ch03/include02_footer.jsp=UTF-8
