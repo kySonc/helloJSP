@@ -1,16 +1,17 @@
-fuction CheckAddProduct() {
+function CheckAddProduct() {
 	
 	var productId = document.getElementById("productId");
 	var name = document.getElementById("name");
 	var unitPrice = document.getElementById("unitPrice");
-	var unitInStock = document.getElementById("unitsInStock");
+	var unitsInStock = document.getElementById("unitsInStock");
 	
 	//상품 아이디 체크
 	//입력된 상품 아이디가 정규 표현식과 일치하는지 검사
 	//P로 시작하고 숫자를 조합하여 문자 길이가 5~12자
 	//정규 표현식과 일치 하지 않으면 오류 페이지를 출력
-	if(!check(/^p[0-9]{4,11}$/, productId, "[상품코드]\nP와 숫자를 조합하여 5~12까지 입력하세요\n첫 글자는 반드시 P로 시작하세요"))
-	return false;
+	if(!check(/^p[0-9]{4,11}$/, productId, "[상품코드]\nP와 숫자를 조합하여 5~12까지 입력하세요\n첫 글자는 반드시 P로 시작하세요")){}
+		return false;
+	}
 	
 	//상품명 체크
 	//입력된 상품명의 문자길이가 4~12인지 검사
@@ -26,7 +27,7 @@ fuction CheckAddProduct() {
 		alert("[가격]\n숫자만 입력하세요");
 		unitPrice.select();
 		unitPrice.focus();
-		return false();
+		return false;
 	}
 	
 	//입력된 상품 가격이 음수인지 검사
