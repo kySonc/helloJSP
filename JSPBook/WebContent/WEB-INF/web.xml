@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<!-- 시큐리티 역할을 설정 -->
+	<security-role>
+		<role-name>role1</role-name>
+	</security-role>
+	<!-- 시큐리티 제약 사항을 설정 -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<!-- 접근을 제한할 요청 경로를 설정 -->
+			<url-pattern>/ch10/security01.jsp</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<!-- 권한이 부여된 사용자 이름을 설정 -->
+			<role-name>role1</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<!-- 시큐리티 인증을 설정 -->
+	<login-config>
+		<!-- BASIC 인증 처리 기법을 설정 -->
+		<auth-method>BASIC</auth-method>
+	</login-config>
+</web-app>

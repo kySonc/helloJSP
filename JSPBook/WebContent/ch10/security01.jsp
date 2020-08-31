@@ -4,6 +4,6 @@
 		<title>Security</title>
 	</head>
 	<body>
-		<p>인중 성공했습니다
+		<p>인증 성공했습니다
 	</body>
 </html>
