@@ -15,6 +15,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/standard.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jstl.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Tools/cos-26/lib/cos.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Tools/cos-26Dec2008/lib/cos.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
