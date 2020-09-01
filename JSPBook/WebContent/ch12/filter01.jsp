@@ -4,7 +4,7 @@
 		<title>Filter</title>
 	</head>
 	<body>
-		<form action="filter01_process.jsp" method="post">
+		<form method="post" action="filter01_process.jsp">
 			<p>이름 : <input type="text" name="name">
 			<input type="submit" value="전송">
 		</form>
