@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
+
 	<security-role>
 		<description></description>
 		<role-name>role1</role-name>
@@ -10,11 +11,13 @@
 			<url-pattern>/ch10/security02.jsp</url-pattern>
 			<http-method>GET</http-method>
 		</web-resource-collection>
+	
 		<auth-constraint>
 			<description></description>
 			<role-name>role1</role-name>
 		</auth-constraint>
 	</security-constraint>
+<!--
 	<login-config>
 		<auth-method>FORM</auth-method>
 		<form-login-config>
@@ -28,6 +31,16 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/ch11/exceptionType_error.jsp</location>
 	</error-page>
+	-->  
+	<filter>
+		<filter-name>Filter01</filter-name>
+		<filter-class>ch12.com.filter.AuthenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter01</filter-name>
+		<url-pattern>/ch12/filter01_process.jsp</url-pattern>
+	</filter-mapping>
+	
 	<filter>
 		<filter-name>Filter02</filter-name>
 		<filter-class>ch12.com.filter.InitParamFilter</filter-class>
@@ -42,6 +55,19 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>Filter02</filter-name>
+		<url-pattern>/ch12/filter02_process.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Filter02_2</filter-name>
+		<filter-class>ch12.com.filter.LogFileFilter</filter-class>
+		<param-name>
+			<param-name>filename</param-name>
+			<param-value>c:\\logs\\monitor.log</param-value>
+		</param-name>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter02_2</filter-name>
 		<url-pattern>/ch12/filter02_process.jsp</url-pattern>
 	</filter-mapping>
 </web-app>

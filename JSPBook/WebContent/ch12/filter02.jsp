@@ -4,7 +4,7 @@
 		<title>Filter</title>
 	</head>
 	<body>
-		<form method="post" action="fiter02.process.jsp">
+		<form action="filter02_process.jsp" method="post" >
 			<p>아이디 : <input type="text" name="id">
 			<p>비밀번호 : <input type="text" name= "passwd">
 			<p><input type="submit" value="전송">

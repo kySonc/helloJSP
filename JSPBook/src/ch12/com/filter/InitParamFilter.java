@@ -2,7 +2,6 @@ package ch12.com.filter;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -36,7 +35,7 @@ public class InitParamFilter implements Filter{
 		String message;
 		//응답 웹 페이지에 대한 문자 인코딩,콘텐츠 유형을 설정하도록 response내장 객체의 메소드를 작성
 		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=utf-8");
+		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
 		//폼 페이지에서 전송된 요청 파라미터와 web.xml파일에 설정된 매개변수의 값을 비교하여 메시지를 출력하도록 작성
 		if(id.equals(param1) && passwd.equals(param2))
@@ -54,4 +53,5 @@ public class InitParamFilter implements Filter{
 		System.out.println("Filter02 해제...");
 	}
 }
+
 
