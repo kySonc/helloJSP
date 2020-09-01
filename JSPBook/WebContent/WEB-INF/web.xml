@@ -53,6 +53,7 @@
 		<filter-name>Filter02</filter-name>
 		<url-pattern>/ch12/filter02_process.jsp</url-pattern>
 	</filter-mapping>
+<!--	
 	<filter>
 		<filter-name>Filter02_2</filter-name>
 		<filter-class>ch12.com.filter.LogFileFilter</filter-class>
@@ -65,4 +66,5 @@
 		<filter-name>Filter02_2</filter-name>
 		<url-pattern>/ch12/filter02_2process.jsp</url-pattern>
 	</filter-mapping>
+-->
 </web-app>
