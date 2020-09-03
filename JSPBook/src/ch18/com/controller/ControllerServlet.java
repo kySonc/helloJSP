@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import ch18.com.model.LoginBean;
 
-public class ControllerServelt extends HttpServlet{
+public class ControllerServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	@Override
