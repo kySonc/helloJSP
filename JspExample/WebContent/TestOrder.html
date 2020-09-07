@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>음식 주문</title>
+	</head>
+		<style>
+			img{
+				width:350px;
+				height:350px;
+			}
+			.container div{
+				border:1px solid red;
+				display:inline-block;
+				margin:10px;
+			}
+		</style>	
+	<body>
+		
+		<h3>음식 주문</h3>
+		<form action="TestOrder.jsp" name="member" method="post">
+			<div class="container">
+				<div>
+					<img src="images/1.jpg">
+					<P>중식 : <input type="checkbox" >짜장면:5000원
+					주문 수량 : <input type="number" name="Black-bean-sauce noodles" min="0" max="100">
+				</div>
+				<div>
+					<img src="images/2.png">
+					<P>한식 : <input type="checkbox" >김치찌개:5000원
+					주문 수량 : <input type="number" name="Kimchi stew" min="0" max="100">
+				</div>
+				<div>
+					<img src="images/3.jpg">
+					<P>일식 : <input type="checkbox" >초밥 :5000원
+				 	주문 수량 : <input type="number" name="Sushi" min="0" max="100">
+				 </div>
+				 <div>	
+				 	<img src="images/4.jpg">
+				 	<P>음료수 : <input type="checkbox" >음료수 :2000원
+					 주문 수량 : <input type="number" name="drink" min="0" max="100">
+				</div>
+			</div>	
+			<fieldset>
+				<legend>배달 정보</legend>	
+				<p>아 이 디 : <input type="text" name="id">
+				<p>연락처 : <select name="phone1">
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="019">019</option>
+						 </select> 
+						 - <input type="text" maxlength="4" size="4" name="phone2">
+						 - <input type="text" maxlength="4" size="4" name="phone3">
+				<p>배달주소 : <input type="text" name="배달주소"><br>
+					<p><input type="submit" value="주문">
+				 	<input type="reset" value="주문취소">
+			</fieldset> 	
+		</form>
+	</body>
+</html>
